@@ -1,8 +1,10 @@
 
-
+<h3>List of Posts</h3>
 <ul>
     {% for item in object_list %}
         <li><a href="{% url 'blog:detail' object.slug %}" >{{ item.title }}</a></li>
+    {% empty %}
+        <li><em>Oops! No post yet.</em></li>
     {% endfor %}
 
 </ul>
