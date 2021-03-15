@@ -25,9 +25,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '5+*j_xhd4-+=ys2i6ens79zgo@b)(c7kbh-nlgt-(h*ky=lmpy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://tosinblog.herokuapp.com/']
+ALLOWED_HOSTS = ['https://tosinblog.herokuapp.com/', "127.0.0.1"]
 
 
 # Application definition
@@ -121,11 +121,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
-
-static_root = os.path.join(PROJECT_ROOT, 'staticfiles')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)
 
