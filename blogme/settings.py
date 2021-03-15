@@ -26,7 +26,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '5+*j_xhd4-+=ys2i6ens79zgo@b)(c7kbh-nlgt-(h*ky=lmpy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://tosinblog.herokuapp.com/',
                 'tosinblog.herokuapp.com',
